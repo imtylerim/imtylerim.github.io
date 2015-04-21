@@ -6,3 +6,8 @@ h1 {
 	font-size: 20px;
 	font-family: Century;
 }
+
+a {
+	color: blue;
+	text-decoration: none;
+}
