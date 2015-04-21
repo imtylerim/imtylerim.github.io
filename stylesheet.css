@@ -11,3 +11,8 @@ a {
 	color: blue;
 	text-decoration: none;
 }
+
+img {
+	height: 50%;
+	width: 50%;
+}
