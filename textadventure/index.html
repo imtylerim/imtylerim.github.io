@@ -52,7 +52,7 @@
 
 		<script>
 			function increment() {
-				var numMinutes = Number(localStorage.getItem("MINUTES")) += 15;
+				var numMinutes = Number(localStorage.getItem("MINUTES")) + 15;
 				var numHours = Number(localStorage.getItem("HOURS"));
 				while (numMinutes >= 60)
 				{
