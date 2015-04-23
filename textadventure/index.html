@@ -19,6 +19,7 @@
 					localStorage.getItem("MINUTES") % 60;
 					localStorage.getItem("HOURS")++;
 				}
+				displayTime();
 			}
 
 		</script>
@@ -26,13 +27,15 @@
 		<p id="time"></p>
 
 		<script>
-			var hours = localStorage.getItem("HOURS");
-			var minutes = localStorage.getItem("MINUTES");
-			var timeString = hours + ":";
-			if (minutes == 0 || minutes < 10)
-				timeString += "0";
-			timeString += minutes;
-			document.getElementById("time").innerHTML = timeString;
+			function displayTime() {
+				var hours = localStorage.getItem("HOURS");
+				var minutes = localStorage.getItem("MINUTES");
+				var timeString = hours + ":";
+				if (minutes == 0 || minutes < 10)
+					timeString += "0";
+				timeString += minutes;
+				document.getElementById("time").innerHTML = timeString;
+			}
 		</script>
 		
 		<p>
