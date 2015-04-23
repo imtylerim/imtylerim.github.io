@@ -9,16 +9,22 @@ function work() {
 	increment(15);
 }
 
-function goParty() {
-
-}
-
 function masturbate() {
-
+	var parent = document.getElementById("body");
+	var textNode = document.getElementById("text");
+	var newTextNode = document.createTextNode("You masturbate for fifteen minutes.")
+	parent.appendChild(newTextNode);
+	parent.replaceChild(newTextNode, textNode);
+	increment(15);
 }
 
 function watchTV() {
-
+	var parent = document.getElementById("body");
+	var textNode = document.getElementById("text");
+	var newTextNode = document.createTextNode("You watch Adventure Time for fifteen minutes.")
+	parent.appendChild(newTextNode);
+	parent.replaceChild(newTextNode, textNode);
+	increment(15);
 }
 
 
@@ -37,5 +43,5 @@ function goUpstairs() {
 }
 
 function masturbateAtParty() {
-	
+
 }
