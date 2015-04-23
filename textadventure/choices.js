@@ -6,6 +6,14 @@ function work() {
 	console.log(localStorage.getItem("MINUTES"));
 }
 
+function goToParty() {
+	
+}
+
 function masturbate() {
+
+}
+
+function watchTV() {
 
 }
