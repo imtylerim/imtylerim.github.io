@@ -4,8 +4,12 @@ function work() {
 
 	var parent = document.getElementById("body");
 	var textNode = document.getElementById("text");
-	var newTextNode = document.createTextNode("You work for twenty minutes.\n\n")
-	parent.appendChild(newTextNode);
+	var newNode = document.createElement("text");
+	var newTextNode = document.createTextNode("You work for twenty minutes.")
+
+	newNode.appendChild(newTextNode);
+	parent.appendChild(newNode);
+	
 	parent.replaceChild(newTextNode, textNode);
 	increment(20);
 	console.log(textNode);
