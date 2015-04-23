@@ -29,8 +29,8 @@ function displayTime() {
 	document.getElementById("time").innerHTML = timeString;
 }
 
-function increment() {
-	
+function increment1() {
+
 	var numMinutes = Number(localStorage.getItem("MINUTES")) + 15;
 	var numHours = Number(localStorage.getItem("HOURS"));
 
