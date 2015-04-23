@@ -63,8 +63,11 @@
 				localStorage.setItem("HOURS") = numHours;
 				displayTime();
 			}
-
+			increment();
 			displayTime();
+			console.log(localStorage.getItem("HOURS"));
+
+			console.log(localStorage.getItem("MINUTES"));
 
 			switch(choice) {
 				case 1:
