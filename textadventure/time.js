@@ -30,8 +30,8 @@ function displayTime() {
 			}
 
 			/*	Increments minutes, then calls displayTime()to reflect time change.	*/
-			function increment() {
-				var numMinutes = Number(localStorage.getItem("MINUTES")) + 15;
+			function increment(minutes) {
+				var numMinutes = Number(localStorage.getItem("MINUTES")) + minutes;
 				var numHours = Number(localStorage.getItem("HOURS"));
 
 				/*	If minutes exceeds 60, add 1 to hours and % minutes 
