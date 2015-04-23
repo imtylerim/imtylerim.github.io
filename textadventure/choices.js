@@ -2,9 +2,9 @@
 
 function work() {
 
-	var parent = document.getElementById("body");
+	/* var parent = document.getElementById("body");
 	var textNode = document.getElementById("text");
-	var newNode = document.createElement("text");
+	var newNode = document.createElement("SPAN");
 	var newTextNode = document.createTextNode("You work for twenty minutes.")
 
 	newNode.appendChild(newTextNode);
@@ -12,7 +12,10 @@ function work() {
 	parent.replaceChild(newNode, textNode);
 	increment(20);
 	console.log(textNode);
-	console.log(newTextNode);
+	console.log(newTextNode); */
+
+	var parent = document.getElementsByTagName("span");
+	console.log(parent);
 }
 
 function masturbate() {
