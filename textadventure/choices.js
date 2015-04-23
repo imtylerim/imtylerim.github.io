@@ -2,20 +2,14 @@
 
 function work() {
 
-	/* var parent = document.getElementById("body");
-	var textNode = document.getElementById("text");
-	var newNode = document.createElement("SPAN");
-	var newTextNode = document.createTextNode("You work for twenty minutes.")
+	var para = document.createElement("p");
+	var node = document.createTextNode("You work for twenty minutes");
+	para.appendChild(node);
 
-	newNode.appendChild(newTextNode);
-	
-	parent.replaceChild(newNode, textNode);
+	var element = document.getElementById("text");
+	element.appendChild(para);
+
 	increment(20);
-	console.log(textNode);
-	console.log(newTextNode); */
-
-	var parent = document.getElementsByTagName("span");
-	console.log(parent);
 }
 
 function masturbate() {
