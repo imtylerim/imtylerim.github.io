@@ -15,7 +15,9 @@
 
 		</script>
 		<p id="time">
-			800
+			<script>
+				document.getElementById("time").innerHTML = "" + (time / 100) + ":" + (time % 100);
+			</script>
 		</p>
 		<p>
 			The yellow-white light comes crackling alive. The familiar smell of dirty laundry. The door closes shut behind you.
@@ -34,7 +36,7 @@
 		</p>
 
 		<button type="button" onclick="increment(3);">Do your work</button>
-		<button type="button">Watch your favorite TV show</button>
+		<button type="button" >Watch your favorite TV show</button>
 		<button type="button">Go to the party</button>
 		<button type="button">Masturbate</button>
 
