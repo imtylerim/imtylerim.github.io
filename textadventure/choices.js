@@ -1,3 +1,5 @@
+/*	Room choices	*/
+
 function work() {
 	var parent = document.getElementById("body");
 	var textNode = document.getElementById("text");
@@ -7,7 +9,7 @@ function work() {
 	increment(15);
 }
 
-function goToParty() {
+function goParty() {
 
 }
 
@@ -16,5 +18,20 @@ function masturbate() {
 }
 
 function watchTV() {
+
+}
+
+
+/*	Party choices	*/
+
+function goLivingRoom() {
+
+}
+
+function goDiningRoom() {
+
+}
+
+function goUpstairs() {
 
 }
