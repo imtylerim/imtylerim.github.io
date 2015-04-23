@@ -8,9 +8,8 @@ function work() {
 	var newTextNode = document.createTextNode("You work for twenty minutes.")
 
 	newNode.appendChild(newTextNode);
-	parent.appendChild(newNode);
 	
-	parent.replaceChild(newTextNode, textNode);
+	parent.replaceChild(newNode, textNode);
 	increment(20);
 	console.log(textNode);
 	console.log(newTextNode);
