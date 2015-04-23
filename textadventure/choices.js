@@ -2,7 +2,7 @@ function work() {
 	var parent = document.getElementById("body");
 	var textNode = document.getElementById("text");
 	var newTextNode = document.createTextNode("You worked for fifteen minutes.")
-	parent.replaceChild(textNode, newTextNode);
+	parent.replaceChild(newTextNode, textNode);
 	increment(15);
 }
 
