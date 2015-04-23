@@ -51,16 +51,12 @@
 			Choices, choices. What do you do?
 		</p>
 
-		<input type="button" id="increment">Do your work</button>
-		<input type="button" id="increment">Watch your favorite TV show</button>
-		<input type="button" id="increment">Go to the party</button>
-		<input type="button" id="increment">Masturbate</button>
+		<button type="button" onclick="increment(\'' + 30 + '\')">Do your work</button>
+		<button type="button" onclick="increment()">Watch your favorite TV show</button>
+		<button type="button" onclick="increment()">Go to the party</button>
+		<button type="button" onclick="increment()">Masturbate</button>
 
 		<script>
-
-			document.getElementById("increment").addEventListener("click", function() {
-				increment(30);
-			}, false);
 
 			switch(choice) {
 				case 1:
