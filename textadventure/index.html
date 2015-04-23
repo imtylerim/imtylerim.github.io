@@ -8,9 +8,10 @@
 	<body>
 
 		<script>
+			localStorage.setItem("TIME", 800);
 
 			function increment(minutes) {
-				Number(document.getElementById("time")) += minutes;
+				localStorage.getItem("TIME") += minutes;
 			}
 
 		</script>
@@ -18,8 +19,8 @@
 		<p id="time"></p>
 
 		<script>
-			document.getElementById("time") = 800;
-			document.getElementById("time").innerHTML = document.getElementById("time") / 100;
+			document.getElementById("time") = localStorage.getItem("TIME");
+			document.getElementById("time").innerHTML = localStorage.getItem("TIME") / 100;
 		</script>
 		
 		<p>
@@ -38,10 +39,10 @@
 			Choices, choices. What do you do?
 		</p>
 
-		<button type="button" onclick="increment(3);">Do your work</button>
-		<button type="button" >Watch your favorite TV show</button>
-		<button type="button">Go to the party</button>
-		<button type="button">Masturbate</button>
+		<button type="button" onclick="">Do your work</button>
+		<button type="button" onclick="">Watch your favorite TV show</button>
+		<button type="button" onclick="">Go to the party</button>
+		<button type="button" onclick="">Masturbate</button>
 
 		<script>
 
