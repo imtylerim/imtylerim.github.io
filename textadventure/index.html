@@ -19,8 +19,9 @@
 				var minutes = Number(localStorage.getItem("MINUTES"));
 				var timeString = "";
 
-				//Displays hours up at 12, with "0 o'clock" displayed as midnight
-				if (hours == 0)
+				/*  Since hours need to be %'d by 12, both 0 and 12 need 
+					special cases, or else they would be displayed as 0:00.	*/ 
+				if (hours == 0 || hours == 12)
 					timeString += 12;
 				else
 					timeString += hours % 12;
