@@ -9,7 +9,7 @@
 
 		<script>
 			localStorage.setItem("HOURS", 8);
-			localStorage.setItem("MINUTES", 10);
+			localStorage.setItem("MINUTES", 30);
 
 			function displayTime() {
 				var hours = localStorage.getItem("HOURS");
@@ -21,7 +21,8 @@
 				document.getElementById("time").innerHTML = timeString;
 			}
 
-			function increment(minutes) {
+			function increment() {
+				var minutes = "15";
 				var numMinutes = parseInt(minutes);
 				localStorage.getItem("MINUTES") += numMinutes;
 				while (localStorage.getItem("MINUTES") >= 60)
@@ -56,7 +57,7 @@
 			Choices, choices. What do you do?
 		</p>
 
-		<button type="button" onclick="increment(\'' + 30 + '\')">Do your work</button>
+		<button type="button" onclick="increment()">Do your work</button>
 		<button type="button" onclick="increment()">Watch your favorite TV show</button>
 		<button type="button" onclick="increment()">Go to the party</button>
 		<button type="button" onclick="increment()">Masturbate</button>
