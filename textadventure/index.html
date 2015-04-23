@@ -26,7 +26,7 @@
 				var numHours = Number(localStorage.getItem("HOURS"));
 				while (numMinutes >= 60)
 				{
-					numMinutes %= 60;
+					Math.floor(numMinutes %= 60);
 					numHours++;
 				}
 				localStorage.setItem("MINUTES") = numMinutes;
@@ -36,11 +36,11 @@
 
 		</script>
 
-		<p id="time"></p>
-
-		<script>
-			displayTime();
-		</script>
+		<p id="time">
+			<script>
+				displayTime();
+			</script>
+		</p>
 		
 		<p>
 			The yellow-white light comes crackling alive. The familiar smell of dirty laundry. The door closes shut behind you.
@@ -66,6 +66,7 @@
 		<script>
 			increment();
 			displayTime();
+
 			switch(choice) {
 				case 1:
 					break;
