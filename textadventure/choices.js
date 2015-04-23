@@ -35,3 +35,7 @@ function goDiningRoom() {
 function goUpstairs() {
 
 }
+
+function masturbateAtParty() {
+	
+}
