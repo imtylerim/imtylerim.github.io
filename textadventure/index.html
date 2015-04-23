@@ -8,13 +8,14 @@
 	<body>
 
 		<script>
+
 			/*	Our adventure begins at 8:00 pm!	*/
 			localStorage.setItem("HOURS", 20);
 			localStorage.setItem("MINUTES", 00);
 
 			/*  Displays time.
 				Time is calculated in 24-hour format,
-				but is displayed in 12-hour format. */
+				but is displayed in 12-hour format.	 */
 			function displayTime() {
 				var hours = Number(localStorage.getItem("HOURS"));
 				var minutes = Number(localStorage.getItem("MINUTES"));
@@ -26,31 +27,31 @@
 					timeString += 12;
 				else
 					timeString += hours % 12;
-
 				timeString += ":";
 
-				//Ensures time is not printed as 8:9, for example, but 8:09
+				/*	Ensure time isn't printed as 8:9, but 8:09.	*/
 				if (minutes == 0 || minutes < 10)
 					timeString += "0";
 				timeString += minutes;
 
+				/*	Prints am or pm, depending	*/
 				if (hours < 12)
 					timeString += " am"
 				else
 					timeString += " pm"
 
+				/*	Modify HTML to display timeString	*/
 				document.getElementById("time").innerHTML = timeString;
 			}
 
 		</script>
 
-		<p id="time">
-			<script>
-				displayTime();
-			</script>
-		</p>
+		<p id="time"></p>
+		<script>
+			displayTime();
+		</script>
 		
-		<!--The actual text begins here! -->
+
 		<p>
 			The yellow-white light comes crackling alive. The familiar smell of dirty laundry. The door closes shut behind you.
 		</p>
@@ -67,6 +68,7 @@
 			Choices, choices. What do you do?
 		</p>
 
+
 		<button type="button" onclick="increment()">Do your work</button>
 		<button type="button" onclick="increment()">Watch your favorite TV show</button>
 		<button type="button" onclick="increment()">Go to the party</button>
@@ -74,8 +76,7 @@
 
 		<script>
 
-			/*	Increments the number of minutes, then 
-				calls displayTime()	to reflect time change.	*/
+			/*	Increments minutes, then calls displayTime()to reflect time change.	*/
 			function increment() {
 				var numMinutes = Number(localStorage.getItem("MINUTES")) + 15;
 				var numHours = Number(localStorage.getItem("HOURS"));
@@ -84,7 +85,7 @@
 					by 60. If hours exceeds 24, reset it 0.				*/
 				if (numMinutes >= 60)
 				{
-					Math.floor(numMinutes %= 60);
+					numMinutes %= 60;
 					numHours++;
 				}
 				if (numHours == 24)
@@ -92,7 +93,7 @@
 					numHours = 0;
 				}
 
-				/*	Make sure to change localStorage	*/
+				/*	Make sure to modify localStorage, and call displayTime().	*/
 				localStorage.setItem("MINUTES", numMinutes);
 				localStorage.setItem("HOURS", numHours);
 				displayTime();
