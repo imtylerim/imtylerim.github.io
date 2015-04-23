@@ -8,7 +8,8 @@
 	<body>
 
 		<script>
-			localStorage.setItem("HOURS", 0);
+			/*	Our adventure begins at 8:00 pm!	*/
+			localStorage.setItem("HOURS", 20);
 			localStorage.setItem("MINUTES", 00);
 
 			/*  Displays time.
@@ -49,6 +50,7 @@
 			</script>
 		</p>
 		
+		<!--The actual text begins here! -->
 		<p>
 			The yellow-white light comes crackling alive. The familiar smell of dirty laundry. The door closes shut behind you.
 		</p>
@@ -71,9 +73,15 @@
 		<button type="button" onclick="increment()">Masturbate</button>
 
 		<script>
+
+			/*	Increments the number of minutes, then 
+				calls displayTime()	to reflect time change.	*/
 			function increment() {
 				var numMinutes = Number(localStorage.getItem("MINUTES")) + 15;
 				var numHours = Number(localStorage.getItem("HOURS"));
+
+				/*	If minutes exceeds 60, add 1 to hours and % minutes 
+					by 60. If hours exceeds 24, reset it 0.				*/
 				if (numMinutes >= 60)
 				{
 					Math.floor(numMinutes %= 60);
@@ -83,6 +91,8 @@
 				{
 					numHours = 0;
 				}
+
+				/*	Make sure to change localStorage	*/
 				localStorage.setItem("MINUTES", numMinutes);
 				localStorage.setItem("HOURS", numHours);
 				displayTime();
