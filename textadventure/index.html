@@ -9,7 +9,7 @@
 
 		<script>
 			localStorage.setItem("HOURS", 8);
-			localStorage.setItem("MINUTES", 30);
+			localStorage.setItem("MINUTES", 40);
 
 			function displayTime() {
 				var hours = Number(localStorage.getItem("HOURS"));
@@ -19,19 +19,6 @@
 					timeString += "0";
 				timeString += minutes;
 				document.getElementById("time").innerHTML = timeString;
-			}
-
-			function increment() {
-				var numMinutes = Number(localStorage.getItem("MINUTES")) += 15;
-				var numHours = Number(localStorage.getItem("HOURS"));
-				while (numMinutes >= 60)
-				{
-					Math.floor(numMinutes %= 60);
-					numHours++;
-				}
-				localStorage.setItem("MINUTES") = numMinutes;
-				localStorage.setItem("HOURS") = numHours;
-				displayTime();
 			}
 
 		</script>
@@ -64,7 +51,19 @@
 		<button type="button" onclick="increment()">Masturbate</button>
 
 		<script>
-			increment();
+			function increment() {
+				var numMinutes = Number(localStorage.getItem("MINUTES")) += 15;
+				var numHours = Number(localStorage.getItem("HOURS"));
+				while (numMinutes >= 60)
+				{
+					Math.floor(numMinutes %= 60);
+					numHours++;
+				}
+				localStorage.setItem("MINUTES") = numMinutes;
+				localStorage.setItem("HOURS") = numHours;
+				displayTime();
+			}
+
 			displayTime();
 
 			switch(choice) {
