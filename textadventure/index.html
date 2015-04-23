@@ -19,8 +19,7 @@
 		<p id="time"></p>
 
 		<script>
-			document.getElementById("time") = localStorage.getItem("TIME");
-			document.getElementById("time").innerHTML = localStorage.getItem("TIME") / 100;
+			document.getElementById("time").innerHTML = "" + (localStorage.getItem("TIME") / 100) + ":" + (localStorage.getItem("TIME") % 100);
 		</script>
 		
 		<p>
