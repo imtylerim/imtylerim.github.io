@@ -29,12 +29,31 @@ function displayTime() {
 				document.getElementById("time").innerHTML = timeString;
 			}
 
+			function increment() {
+				var numMinutes = Number(localStorage.getItem("MINUTES")) + 15;
+				var numHours = Number(localStorage.getItem("HOURS"));
+
+				/*	If minutes exceeds 60, add 1 to hours and % minutes 
+					by 60. If hours exceeds 24, reset it 0.				*/
+				if (numMinutes >= 60)
+				{
+					numMinutes %= 60;
+					numHours++;
+				}
+				if (numHours == 24)
+				{
+					numHours = 0;
+				}
+
+				/*	Make sure to modify localStorage, and call displayTime().	*/
+				localStorage.setItem("MINUTES", numMinutes);
+				localStorage.setItem("HOURS", numHours);
+				displayTime();
+			}
+
 			/*	Increments minutes, then calls displayTime()to reflect time change.	*/
 			function increment(minutes) {
-				
-				/*	Set default number of minutes to 15.	*/
-				if (minutes == null)
-					minutes = 15;
+
 				var numMinutes = Number(localStorage.getItem("MINUTES")) + minutes;
 				var numHours = Number(localStorage.getItem("HOURS"));
 
