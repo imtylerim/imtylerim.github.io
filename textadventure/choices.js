@@ -1,10 +1,8 @@
 function work() {
 	var parent = document.getElementById("body");
-	var child = document.getElementById("text");
-	parent.removeChild(child);
-	var para = document.createElement("text");
-	var t = document.createTextNode("You worked for fifteen minutes.")
-	para.appendChild(t);
+	var textNode = document.getElementById("text");
+	var newTextNode = "You worked for fifteen minutes."
+	parent.replaceChild(textNode, newTextNode);
 	increment(15);
 }
 
