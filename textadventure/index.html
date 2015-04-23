@@ -22,14 +22,15 @@
 			}
 
 			function increment() {
-				var minutes = "15";
-				var numMinutes = parseInt(minutes);
-				localStorage.getItem("MINUTES") += numMinutes;
-				while (localStorage.getItem("MINUTES") >= 60)
+				var numMinutes = localStorage.getItem("MINUTES") += 15;
+				var numHours = localStorage.getItem("HOURS");
+				while (numMinutes >= 60)
 				{
-					localStorage.getItem("MINUTES") % 60;
-					localStorage.getItem("HOURS")++;
+					numMinutes %= 60;
+					numHours++;
 				}
+				localStorage.setItem("MINUTES") = numMinutes;
+				localStorage.setItem("HOURS") = numHours;
 				displayTime();
 			}
 
