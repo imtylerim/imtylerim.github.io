@@ -11,18 +11,13 @@
 			localStorage.setItem("HOURS", 8);
 			localStorage.setItem("MINUTES", 9);
 
-			function incrementHours(hours) {
-				var numHours = parseInt(hours);
-				localStorage.getItem("HOURS") += numHours;
-			}
-
-			function incrementMinutes(minutes) {
+			function increment(minutes) {
 				var numMinutes = parseInt(minutes);
 				localStorage.getItem("MINUTES") += numMinutes;
 				while (localStorage.getItem("MINUTES") >= 60)
 				{
 					localStorage.getItem("MINUTES") % 60;
-					incrementHours(1);
+					localStorage.getItem("HOURS")++;
 				}
 			}
 
@@ -56,12 +51,16 @@
 			Choices, choices. What do you do?
 		</p>
 
-		<button type="button" onclick="incrementMinutes("'30'")">Do your work</button>
-		<button type="button" onclick="">Watch your favorite TV show</button>
-		<button type="button" onclick="">Go to the party</button>
-		<button type="button" onclick="">Masturbate</button>
+		<input type="button" id="increment">Do your work</button>
+		<input type="button" id="increment">Watch your favorite TV show</button>
+		<input type="button" id="increment">Go to the party</button>
+		<input type="button" id="increment">Masturbate</button>
 
 		<script>
+
+			document.getElementById("increment").addEventListener("click", function() {
+				increment(30);
+			}, false);
 
 			switch(choice) {
 				case 1:
