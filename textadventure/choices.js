@@ -1,7 +1,7 @@
 function work() {
-	document.open();
-	document.write("You worked for fifteen minutes.");
-	document.close();
+	var parent = document.getElementById("body");
+	var child = document.getElementById("text");
+	parent.removeChild(child);
 	increment(15);
 	displayTime();
 	console.log(localStorage.getItem("HOURS"));
