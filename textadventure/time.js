@@ -31,6 +31,10 @@ function displayTime() {
 
 			/*	Increments minutes, then calls displayTime()to reflect time change.	*/
 			function increment(minutes) {
+				
+				/*	Set default number of minutes to 15.	*/
+				if (minutes == null)
+					minutes = 15;
 				var numMinutes = Number(localStorage.getItem("MINUTES")) + minutes;
 				var numHours = Number(localStorage.getItem("HOURS"));
 
