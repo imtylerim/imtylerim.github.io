@@ -9,14 +9,16 @@
 
 		<script>
 			localStorage.setItem("HOURS", 8);
-			localStorage.setItem("MINUTES", 00);
+			localStorage.setItem("MINUTES", 9);
 
 			function incrementHours(hours) {
-				localStorage.getItem("HOURS") += hours;
+				var numHours = parseInt(hours);
+				localStorage.getItem("HOURS") += numHours;
 			}
 
 			function incrementMinutes(minutes) {
-				localStorage.getItem("MINUTES") += minutes;
+				var numMinutes = parseInt(minutes);
+				localStorage.getItem("MINUTES") += numMinutes;
 				while (localStorage.getItem("MINUTES") >= 60)
 				{
 					localStorage.getItem("MINUTES") % 60;
@@ -29,9 +31,12 @@
 		<p id="time"></p>
 
 		<script>
-			var timeString = localStorage.getItem("HOURS")+ ":" + localStorage.getItem("MINUTES");
-			if (localStorage.getItem("MINUTES") == 0)
+			var hours = localStorage.getItem("HOURS");
+			var minutes = localStorage.getItem("MINUTES");
+			var timeString = hours + ":";
+			if (minutes == 0 || minutes < 10)
 				timeString += "0";
+			timeString += minutes;
 			document.getElementById("time").innerHTML = timeString;
 		</script>
 		
@@ -51,7 +56,7 @@
 			Choices, choices. What do you do?
 		</p>
 
-		<button type="button" onclick="">Do your work</button>
+		<button type="button" onclick="incrementMinutes("'30'")">Do your work</button>
 		<button type="button" onclick="">Watch your favorite TV show</button>
 		<button type="button" onclick="">Go to the party</button>
 		<button type="button" onclick="">Masturbate</button>
