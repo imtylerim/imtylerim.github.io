@@ -8,16 +8,35 @@
 	<body>
 
 		<script>
-			localStorage.setItem("HOURS", 8);
-			localStorage.setItem("MINUTES", 40);
+			localStorage.setItem("HOURS", 0);
+			localStorage.setItem("MINUTES", 00);
 
+			/*  Displays time.
+				Time is calculated in 24-hour format,
+				but is displayed in 12-hour format. */
 			function displayTime() {
 				var hours = Number(localStorage.getItem("HOURS"));
 				var minutes = Number(localStorage.getItem("MINUTES"));
-				var timeString = hours + ":";
+				var timeString = "";
+
+				//Displays hours up at 12, with "0 o'clock" displayed as midnight
+				if (hours == 0)
+					timeString += 12;
+				else
+					timeString += hours % 12;
+
+				timeString += ":";
+
+				//Ensures time is not printed as 8:9, for example, but 8:09
 				if (minutes == 0 || minutes < 10)
 					timeString += "0";
 				timeString += minutes;
+
+				if (hours < 12)
+					timeString += " am"
+				else
+					timeString += " pm"
+
 				document.getElementById("time").innerHTML = timeString;
 			}
 
@@ -54,22 +73,21 @@
 			function increment() {
 				var numMinutes = Number(localStorage.getItem("MINUTES")) + 15;
 				var numHours = Number(localStorage.getItem("HOURS"));
-				while (numMinutes >= 60)
+				if (numMinutes >= 60)
 				{
 					Math.floor(numMinutes %= 60);
 					numHours++;
+				}
+				if (numHours == 24)
+				{
+					numHours = 0;
 				}
 				localStorage.setItem("MINUTES", numMinutes);
 				localStorage.setItem("HOURS", numHours);
 				displayTime();
 			}
-			increment();
-			displayTime();
-			console.log(localStorage.getItem("HOURS"));
 
-			console.log(localStorage.getItem("MINUTES"));
-
-			switch(choice) {
+			/*switch(choice) {
 				case 1:
 					break;
 				case 2:
@@ -78,7 +96,7 @@
 					break;
 				case 4:
 					break;
-			}
+			} */
 		
 		</script>
 
