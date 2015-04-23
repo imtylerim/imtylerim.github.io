@@ -2,10 +2,10 @@ function work() {
 	var parent = document.getElementById("body");
 	var child = document.getElementById("text");
 	parent.removeChild(child);
+	var para = document.createElement("text");
+	var t = document.createTextNode("You worked for fifteen minutes.")
+	para.appendChild(t);
 	increment(15);
-	displayTime();
-	console.log(localStorage.getItem("HOURS"));
-	console.log(localStorage.getItem("MINUTES"));
 }
 
 function goToParty() {
