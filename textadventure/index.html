@@ -12,8 +12,8 @@
 			localStorage.setItem("MINUTES", 30);
 
 			function displayTime() {
-				var hours = localStorage.getItem("HOURS");
-				var minutes = localStorage.getItem("MINUTES");
+				var hours = Number(localStorage.getItem("HOURS"));
+				var minutes = Number(localStorage.getItem("MINUTES"));
 				var timeString = hours + ":";
 				if (minutes == 0 || minutes < 10)
 					timeString += "0";
@@ -22,8 +22,8 @@
 			}
 
 			function increment() {
-				var numMinutes = localStorage.getItem("MINUTES") += 15;
-				var numHours = localStorage.getItem("HOURS");
+				var numMinutes = Number(localStorage.getItem("MINUTES")) += 15;
+				var numHours = Number(localStorage.getItem("HOURS"));
 				while (numMinutes >= 60)
 				{
 					numMinutes %= 60;
@@ -31,8 +31,6 @@
 				}
 				localStorage.setItem("MINUTES") = numMinutes;
 				localStorage.setItem("HOURS") = numHours;
-				document.getElementById("MINUTES").innerHTML = numMinutes;
-				document.getElementById("HOURS").innerHTML = numHours;
 				displayTime();
 			}
 
@@ -66,7 +64,7 @@
 		<button type="button" onclick="increment()">Masturbate</button>
 
 		<script>
-
+			displayTime();
 			switch(choice) {
 				case 1:
 					break;
