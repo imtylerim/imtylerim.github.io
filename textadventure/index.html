@@ -8,10 +8,20 @@
 	<body>
 
 		<script>
-			localStorage.setItem("TIME", 835);
+			localStorage.setItem("HOURS", 8);
+			localStorage.setItem("MINUTES", 00);
 
-			function increment(minutes) {
-				localStorage.getItem("TIME") += minutes;
+			function incrementHours(hours) {
+				localStorage.getItem("HOURS") += hours;
+			}
+
+			function incrementMinutes(minutes) {
+				localStorage.getItem("MINUTES") += minutes;
+				while (localStorage.getItem("MINUTES") >= 60)
+				{
+					localStorage.getItem("MINUTES") % 60;
+					incrementHours(1);
+				}
 			}
 
 		</script>
@@ -19,7 +29,10 @@
 		<p id="time"></p>
 
 		<script>
-			document.getElementById("time").innerHTML = "" + Math.floor((localStorage.getItem("TIME") / 100)) + ":" + Math.floor((localStorage.getItem("TIME") % 100) / 10) + Math.floor(localStorage.getItem("TIME") % 10);
+			var timeString = localStorage.getItem("HOURS")+ ":" + localStorage.getItem("MINUTES");
+			if (localStorage.getItem("MINUTES") == 0)
+				timeString += "0";
+			document.getElementById("time").innerHTML = timeString;
 		</script>
 		
 		<p>
