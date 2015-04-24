@@ -6,6 +6,12 @@
 	margin-top: 1%;
 }
 
-a {
-	text-decoration: none;
+img {
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	position: absolute;
+	opacity: 0.3;
+	z-index: -1;
 }
