@@ -1,12 +1,5 @@
 /*	Room choices	*/
 
-function incrementActivity(activity) {
-
-	var times = localStorage.getItem(activity);
-	localStorage.setItem(activity, times + 1);
-
-}
-
 function work() {
 
 	var para = document.createElement("p");
@@ -22,7 +15,7 @@ function work() {
 	para.appendChild(node);
 	var element = document.getElementById("text");
 	element.appendChild(para);
-
+	localStorage.setItem("timesWorked", times + 1);
 	increment(20);
 }
 
@@ -53,7 +46,7 @@ function masturbate() {
 		
 	var element = document.getElementById("text");
 	element.appendChild(para);
-
+	localStorage.setItem("timesMasturbated", times + 1);
 	increment(15);
 
 }
@@ -72,7 +65,7 @@ function watchTV() {
 	para.appendChild(node);
 	var element = document.getElementById("text");
 	element.appendChild(para);
-
+	localStorage.setItem("timesWatched", times + 1);
 	increment(30);
 
 }
