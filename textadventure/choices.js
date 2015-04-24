@@ -30,6 +30,7 @@ function masturbate() {
 	var para = document.createElement("p");
 	var node = document.createTextNode("hi");
 	var times = Number(localStorage.getItem("timesMasturbated"));
+	console.log(times);
 
 	switch(times) {
 
