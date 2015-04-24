@@ -1,15 +1,16 @@
 function action(string, item, minutes) {
 
-	var para = document.createElement("p");
+	var parent = document.createElement("p");
 	var node = document.createTextNode(string);
-	para.appendChild(node);
+	parent.appendChild(node);
 
 	var element = document.getElementById("text");
-	element.appendChild(para);
+	element.appendChild(parent);
 
 	var times = Number(localStorage.getItem(item));
 	localStorage.setItem(item, times + 1);
 	increment(minutes);
+	
 }
 
 /*	Room choices	*/
@@ -17,10 +18,9 @@ function action(string, item, minutes) {
 function work() {
 
 	var times = Number(localStorage.getItem("timesWorked"));
+	var string;
 
 	if (times < 5) {
-		var para = document.createElement("p");
-		var string;
 
 		switch (times) {
 			case 0:
@@ -38,7 +38,8 @@ function work() {
 				string += " You begin to lose sense of what is and isn't real.";
 				break;
 			case 4:
-				string = "You work for 20 more minutes. Your hand "
+				string = "You work for 20 more minutes." 
+				string += " Your hand will be sore for the rest of the night."
 				string += " You decide to stop working for tonight.";
 				break;
 		}
@@ -50,9 +51,9 @@ function work() {
 function masturbate() {
 
 	var times = Number(localStorage.getItem("timesMasturbated"));
+	var string;
 
 	if (times < 5) {
-		var para = document.createElement("p");
 		var string;
 
 		switch(times) {
@@ -76,23 +77,16 @@ function masturbate() {
 				break;
 		}
 
-		var node = document.createTextNode(string);
-		para.appendChild(node);
-
-		var element = document.getElementById("text");
-		element.appendChild(para);
-		localStorage.setItem("timesMasturbated", times + 1);
-		increment(15);
+		action(string, "timesMasturbated", 15);
 	}
 }
 
 function watchTV() {
 	
 	var times = Number(localStorage.getItem("timesWatched"));
+	var string;
 
 	if (times < 3) {
-		var para = document.createElement("p");
-		var string;
 
 		switch (times) {
 			case 0:
@@ -111,12 +105,7 @@ function watchTV() {
 				break;
 		}
 
-		var node = document.createTextNode(string);
-		para.appendChild(node);
-		var element = document.getElementById("text");
-		element.appendChild(para);
-		localStorage.setItem("timesWatched", times + 1);
-		increment(30);
+		action(string, "timesWatched", 30);
 	}
 }
 
