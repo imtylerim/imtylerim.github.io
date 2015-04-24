@@ -34,14 +34,13 @@ function masturbate() {
 			node = document.createTextNode("You idly masturbate for 15 minutes.");
 
 		case (times == 3):
-			node = document.createTextNode("You masturbate for 15 more minutes. 
-				Your genitals feel irritated.");
-		case (times == 4)
-			node = document.createTextNode("You masturbate for another 15 minutes. 
-				Your genitals are painful to touch. You should probably stop.");
-		case (times == 5)
-			node = document.createTextNode("You still masturbate again for 15 minutes. 
-				Your ravaged genitals cry out in pain. They have been rendered unusable.")
+			node = document.createTextNode("You masturbate for 15 more minutes. Your genitals feel irritated.");
+		
+		case (times == 4):
+			node = document.createTextNode("You masturbate for another 15 minutes. Your genitals are painful to touch. You should probably stop.");
+		
+		case (times == 5):
+			node = document.createTextNode("You still masturbate again for 15 minutes. Your ravaged genitals cry out in pain. They have been rendered unusable.")
 
 	}
 		
