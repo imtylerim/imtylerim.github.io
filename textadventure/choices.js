@@ -22,7 +22,7 @@ function work() {
 				break;
 			case 4:
 				string = "You work for 20 minutes. You'll never finish."
-				string += "You decide to stop working for tonight.";
+				string += " You decide to stop working for tonight.";
 				break;
 		}
 
@@ -101,6 +101,7 @@ function watchTV() {
 				break;
 		}
 
+		var node = document.createTextNode(string);
 		para.appendChild(node);
 		var element = document.getElementById("text");
 		element.appendChild(para);
