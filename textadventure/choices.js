@@ -12,6 +12,7 @@ function work() {
 	var para = document.createElement("p");
 	var node;
 	var times = Number(localStorage.getItem("timesWorked"));
+	console.log(times);
 
 	if (times < 6)
 		node = document.createTextNode("You work for 20 minutes.");
