@@ -10,18 +10,21 @@ function work() {
 
 		switch (times) {
 			case 0:
-			case 1:
 				string = "You work for 20 minutes.";
 				break;
+			case 1:
+				string = "You work for another 20 minutes. You haven't gotten very far.";
+				break;
 			case 2:
-				string = "You work for 20 minutes. Your hand aches. The work is never ending.";
+				string = "You work for another 20 minutes.";
+				string += " Your hand aches. The room is spinning. The work is never ending.";
 				break;
 			case 3:
-				string = "You work for 20 minutes. The room is spinning.";
-				string += "You begin to lose sense of what is and isn't real.";
+				string = "You work for 20 more minutes. ";
+				string += " You begin to lose sense of what is and isn't real.";
 				break;
 			case 4:
-				string = "You work for 20 minutes. You'll never finish."
+				string = "You work for 20 more minutes. Your hand "
 				string += " You decide to stop working for tonight.";
 				break;
 		}
@@ -84,7 +87,7 @@ function watchTV() {
 		var para = document.createElement("p");
 		var string;
 
-		switch (time) {
+		switch (times) {
 			case 0:
 				string = "You watch Adventure Time for 30 minutes.";
 				string += " Finn and Jake are such bros. It is a pleasure to watch.";
