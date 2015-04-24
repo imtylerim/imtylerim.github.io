@@ -15,7 +15,7 @@
 			/*	Our adventure begins at 8:00 pm!	*/
 			localStorage.setItem("HOURS", 20);
 			localStorage.setItem("MINUTES", 00);
-			
+
 			localStorage.setItem("timesMasturbated", 0);
 			localStorage.setItem("timesWorked", 0);
 			localStorage.setItem("timesWatched", 0);
@@ -62,24 +62,9 @@
 			var el4 = document.getElementById("choice4");
 
 			el1.addEventListener("click", work, false);
-			if (localStorage.getItem("timesWorked") == 6)
-			{
-				el1.removeEventListener("click", work);
-			}
-
 			el2.addEventListener("click", watchTV, false);
-			if (localStorage.getItem("timesWatched") == 2)
-			{
-				el2.removeEventListener("click", watchTV);
-			}
-
 			el3.addEventListener("click", increment1, false);
-
 			el4.addEventListener("click", masturbate, false);
-			if (localStorage.getItem("timesMasturbated") == 5)
-			{
-				el4.removeEventListener("click", masturbate);
-			}
 
 		</script>
 
