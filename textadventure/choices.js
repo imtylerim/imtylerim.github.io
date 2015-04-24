@@ -1,3 +1,17 @@
+function action(string, item, minutes) {
+
+	var para = document.createElement("p");
+	var node = document.createTextNode(string);
+	para.appendChild(node);
+
+	var element = document.getElementById("text");
+	element.appendChild(para);
+
+	var times = Number(localStorage.getItem(item));
+	localStorage.setItem(item, times + 1);
+	increment(minutes);
+}
+
 /*	Room choices	*/
 
 function work() {
@@ -29,13 +43,7 @@ function work() {
 				break;
 		}
 
-		var node = document.createTextNode(string);
-		para.appendChild(node);
-
-		var element = document.getElementById("text");
-		element.appendChild(para);
-		localStorage.setItem("timesWorked", times + 1);
-		increment(20);
+		action(string, "timesWorked", 20);
 	}
 }
 
