@@ -11,19 +11,18 @@ function work() {
 
 		case 0:
 		case 1:
-		case 2:
 			node = document.createTextNode("You work for 20 minutes.");
 			break;
 
-		case 3:
+		case 2:
 			node = document.createTextNode("You work for 20 minutes. The work is never ending.");
 			break;
 
-		case 4:
+		case 3:
 			node = document.createTextNode("You work for 20 minutes. Your hand aches. Your head is swimming.");
 			break;
 
-		case 5:
+		case 4:
 			node = document.createTextNode("You work for 20 minutes. You'll never finish. You decide to stop working for tonight.");
 			break;
 	}
