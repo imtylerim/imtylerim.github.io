@@ -43,28 +43,27 @@ function masturbate() {
 
 	var times = Number(localStorage.getItem("timesMasturbated"));
 
-	if (times < 6) {
+	if (times < 5) {
 		var para = document.createElement("p");
 		var string;
 
 		switch(times) {
 			case 0:
-			case 1:
-			case 2: 
+			case 1: 
 				string = "You idly masturbate for 15 minutes.";
 				break;
-			case 3:
+			case 2:
 				string = "You masturbate for 15 more minutes.";
 				string += " Your genitals feel irritated.";
 				break;
-			case 4:
-				string = "You masturbate for another 15 minutes."
+			case 3:
+				string = "You masturbate for another 15 minutes.\n"
 				string += " Your genitals are painful to touch. You should probably stop.";
 				break;
-			case 5:
+			case 4:
 				string = "And yet, you choose to masturbate again.";
-				string += " Your ravaged genitals cry out in pain. They have been rendered unusable.";
-				string += " Hopefully you won't need them later";
+				string += " Your ravaged genitals cry out in pain. They have been rendered unusable.\n";
+				string += " Hopefully you won't need them later.";
 				localStorage.setItem("genitalsIntact", false);
 				break;
 		}
@@ -89,17 +88,17 @@ function watchTV() {
 
 		switch (times) {
 			case 0:
-				string = "You watch Adventure Time for 30 minutes.";
+				string = "You watch Adventure Time for 30 minutes.\n";
 				string += " Finn and Jake are such bros. It is a pleasure to watch.";
 				break;
 			case 1:
-				string = "You watch Louie for 30 minutes.";
-				string += " Hahaha! Poor Louie. He never learns.";
+				string = "You watch Louie for 30 minutes.\n";
+				string += " Hahaha! Poor Louie. He never learns.\n";
 				string += " You realize suddenly that you're a lazy piece of shit."
 				break;
 			case 2:
-				string = "You watch Steven Universe for 15 minutes.";
-				string += " Out of nowhere, a short circuit causes your TV to break. Oh no!"
+				string = "You watch Steven Universe for 15 minutes.\n";
+				string += " Out of nowhere, a short circuit causes your TV to break. Oh no!\n"
 				string += " You cry for another 15 minutes. When will it all end, you wonder.";
 				break;
 		}
