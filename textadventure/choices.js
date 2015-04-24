@@ -28,22 +28,24 @@ function masturbate() {
 
 	switch(times) {
 
-		case (times <= 2): 
+		case 0:
+		case 1:
+		case 2: 
 			node = document.createTextNode("You idly masturbate for 15 minutes.");
 			break;
 
-		case (times == 3):
+		case 3:
 			node = document.createTextNode("You masturbate for 15 more minutes. Your genitals feel irritated.");
 			break;
 
-		case (times == 4):
+		case 4:
 			node = document.createTextNode("You masturbate for another 15 minutes. Your genitals are painful to touch. You should probably stop.");
 			break;
 
-		case (times >= 5):
+		case 5:
 			node = document.createTextNode("You still masturbate again for 15 minutes. Your ravaged genitals cry out in pain. They have been rendered unusable.")
 			break;
-			
+
 	}
 
 	para.appendChild(node);
