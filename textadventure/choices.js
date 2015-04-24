@@ -30,7 +30,7 @@ function masturbate() {
 
 	switch(times) {
 
-		case (times =< 2): 
+		case (times <= 2): 
 			node = document.createTextNode("You idly masturbate for 15 minutes.");
 
 		case (times == 3):
