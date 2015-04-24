@@ -7,10 +7,26 @@ function work() {
 	var times = Number(localStorage.getItem("timesWorked"));
 	console.log(times);
 
-	if (times < 6)
-		node = document.createTextNode("You work for 20 minutes.");
-	else 
-		node = document.createTextNode("You work for 20 minutes. All of your work is done!");
+	switch (times) {
+
+		case 0:
+		case 1:
+		case 2:
+			node = document.createTextNode("You work for 20 minutes.");
+			break;
+
+		case 3:
+			node = document.createTextNode("You work for 20 minutes. The work is never ending.");
+			break;
+
+		case 4:
+			node = document.createTextNode("You work for 20 minutes. Your hand aches. Your head is swimming.");
+			break;
+
+		case 5:
+			node = document.createTextNode("You work for 20 minutes. You'll never finish. You decide to stop working for tonight.");
+			break;
+	}
 
 	para.appendChild(node);
 	var element = document.getElementById("text");
