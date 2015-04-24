@@ -28,7 +28,7 @@ function masturbate() {
 function watchTV() {
 
 	var para = document.createElement("p");
-	var node = document.createTextNode("You watch Adventure Time for 30 minutes");
+	var node = document.createTextNode("You watch Adventure Time for 30 minutes.");
 	para.appendChild(node);
 
 	var element = document.getElementById("text");

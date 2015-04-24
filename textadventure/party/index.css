@@ -5,3 +5,19 @@
 	margin-left: 3%;
 	margin-top: 3%;
 }
+
+img {
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	position: absolute;
+	opacity: 0.5;
+}
+
+p {
+
+	color: white;
+	font-weight: bold;
+
+}
