@@ -52,15 +52,34 @@
 
 		<script>
 
+			localStorage.setItem("timesMasturbated", 0);
+			localStorage.setItem("timesWorked", 0);
+			localStorage.setItem("timesWatched", 0);
+
 			var el1 = document.getElementById("choice1");
 			var el2 = document.getElementById("choice2");
 			var el3 = document.getElementById("choice3");
 			var el4 = document.getElementById("choice4");
 
 			el1.addEventListener("click", work, false);
+			if (localStorage.getItem("timesWorked") == 6)
+			{
+				el1.removeEventListener("click", work);
+			}
+
 			el2.addEventListener("click", watchTV, false);
+			if (localStorage.getItem("timesWatched") == 2)
+			{
+				el2.removeEventListener("click", watchTV);
+			}
+
 			el3.addEventListener("click", increment1, false);
+
 			el4.addEventListener("click", masturbate, false);
+			if (localStorage.getItem("timesMasturbated") == 5)
+			{
+				el4.removeEventListener("click", masturbate);
+			}
 
 		</script>
 
