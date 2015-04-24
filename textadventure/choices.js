@@ -57,12 +57,12 @@ function masturbate() {
 				string += " Your genitals feel irritated.";
 				break;
 			case 3:
-				string = "You masturbate for another 15 minutes.\n"
+				string = "You masturbate for another 15 minutes.\r\n"
 				string += " Your genitals are painful to touch. You should probably stop.";
 				break;
 			case 4:
 				string = "And yet, you choose to masturbate again.";
-				string += " Your ravaged genitals cry out in pain. They have been rendered unusable.\n";
+				string += " Your ravaged genitals cry out in pain. They have been rendered unusable.\r\n";
 				string += " Hopefully you won't need them later.";
 				localStorage.setItem("genitalsIntact", false);
 				break;
