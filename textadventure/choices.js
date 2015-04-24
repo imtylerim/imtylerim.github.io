@@ -11,7 +11,7 @@ function work() {
 
 	var para = document.createElement("p");
 	var node;
-	if (localStorage.getItem("timesWorked") < 6)
+	if (Number(localStorage.getItem("timesWorked")) < 6)
 		node = document.createTextNode("You work for 20 minutes.");
 	else 
 		node = document.createTextNode("You work for 20 minutes. All of your work is done!");
@@ -25,7 +25,7 @@ function work() {
 function masturbate() {
 
 	var para = document.createElement("p");
-	var times = localStorage.getItem("timesMasturbated");
+	var times = Number(localStorage.getItem("timesMasturbated"));
 	var node;
 
 	switch(times) {
@@ -55,7 +55,7 @@ function watchTV() {
 
 	var para = document.createElement("p");
 	var node;
-	if (localStorage.getItem("timesWatched") < 2)
+	if (Number(localStorage.getItem("timesWatched")) < 2)
 		node = document.createTextNode("You watch Adventure Time for 30 minutes.");
 	else 
 		node = document.createTextNode("You watch Adventure Time for 30 minutes. There are no more new episodes.");
