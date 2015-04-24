@@ -10,7 +10,7 @@ function action(string, item, minutes) {
 	var times = Number(localStorage.getItem(item));
 	localStorage.setItem(item, times + 1);
 	increment(minutes);
-	
+
 }
 
 /*	Room choices	*/
@@ -41,6 +41,7 @@ function work() {
 				string = "You work for 20 more minutes." 
 				string += " Your hand will be sore for the rest of the night."
 				string += " You decide to stop working for tonight.";
+				localStorage.setItem("soreHand", true);
 				break;
 		}
 
@@ -107,23 +108,4 @@ function watchTV() {
 
 		action(string, "timesWatched", 30);
 	}
-}
-
-
-/*	Party choices	*/
-
-function goLivingRoom() {
-
-}
-
-function goDiningRoom() {
-
-}
-
-function goUpstairs() {
-
-}
-
-function masturbateAtParty() {
-
 }

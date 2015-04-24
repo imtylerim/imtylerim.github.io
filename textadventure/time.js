@@ -1,12 +1,15 @@
+
 /*  Displays time.
 	Time is calculated in 24-hour format,
 	but is displayed in 12-hour format.	 */
+
 function displayTime() {
+
 	var hours = Number(localStorage.getItem("HOURS"));
 	var minutes = Number(localStorage.getItem("MINUTES"));
 	var timeString = "";
 
-	/*  Since hours need to be %'d by 12, both 0 and 12 need 
+	/*  Hours need to be %'d by 12. Both 0 and 12 need 
 		special cases, or else they would be displayed as 0:00.	*/ 
 	if (hours == 0 || hours == 12)
 		timeString += 12;
@@ -27,7 +30,11 @@ function displayTime() {
 
 	/*	Modify HTML to display timeString	*/
 	document.getElementById("time").innerHTML = timeString;
+
 }
+
+/*	Default increment function, adds 15 minutes to time.
+	Example uses: Moving from home to house party.		*/
 
 function increment1() {
 
@@ -35,7 +42,7 @@ function increment1() {
 	var numHours = Number(localStorage.getItem("HOURS"));
 
 	/*	If minutes exceeds 60, add 1 to hours and % minutes 
-		by 60. If hours exceeds 24, reset it 0.				*/
+		by 60. If hours exceeds 24, reset hours 0.			*/
 	if (numMinutes >= 60)
 	{
 		numMinutes %= 60;
@@ -50,9 +57,12 @@ function increment1() {
 	localStorage.setItem("MINUTES", numMinutes);
 	localStorage.setItem("HOURS", numHours);
 	displayTime();
+
 }
 
-/*	Increments minutes, then calls displayTime()to reflect time change.	*/
+/*	Increments minutes, then calls 
+	displayTime() to reflect time change.	*/
+
 function increment(minutes) {
 
 	var numMinutes = Number(localStorage.getItem("MINUTES")) + minutes;
@@ -74,4 +84,5 @@ function increment(minutes) {
 	localStorage.setItem("MINUTES", numMinutes);
 	localStorage.setItem("HOURS", numHours);
 	displayTime();
+
 }
