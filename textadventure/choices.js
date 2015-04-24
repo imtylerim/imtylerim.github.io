@@ -42,7 +42,7 @@ function masturbate() {
 		case (times == 4):
 			node = document.createTextNode("You masturbate for another 15 minutes. Your genitals are painful to touch. You should probably stop.");
 		
-		case (times == 5):
+		case (times >= 5):
 			node = document.createTextNode("You still masturbate again for 15 minutes. Your ravaged genitals cry out in pain. They have been rendered unusable.")
 
 	}
@@ -61,7 +61,7 @@ function watchTV() {
 	var para = document.createElement("p");
 	var node;
 	var times = Number(localStorage.getItem("timesWatched"));
-	
+
 	if (times < 2)
 		node = document.createTextNode("You watch Adventure Time for 30 minutes.");
 	else 
