@@ -13,8 +13,9 @@
 		<p id="time"></p>
 		<script>
 			displayTime();
-			var audio = new Audio('night.mp3');
-			audio.play();
+			var song = new Audio("night.mp3");
+			song.play();
+			song.currentTime = 0;
 			//localStorage.setItem("", false);
 			//localStorage.setItem("", false);
 
@@ -27,19 +28,10 @@
 			</p>
 		</span>
 
-
-		<a href="livingroom.html">
-			<button type="button" id="choice1">Go into the living room</button>
-		</a>
-		<a href="diningroom.html">
-			<button type="button" id="choice2">Go into the dining room</button>
-		</a>
-		<a href="upstairs">
-			<button type="button" id="choice3">Go upstairs</button>
-		</a>
-		<a href="outside">
-			<button type="button" id="choice4">Leave</button>
-		</a>
+		<button type="button" id="choice1"></button>
+		<button type="button" id="choice2"></button>
+		<button type="button" id="choice3"></button>
+		<button type="button" id="choice4"></button>
 
 		<script>
 
@@ -48,10 +40,10 @@
 			var el3 = document.getElementById("choice3");
 			var el4 = document.getElementById("choice4");
 
-			el1.addEventListener("click", goLivingRoom, false);
-			el2.addEventListener("click", goDiningRoom, false);
-			el3.addEventListener("click", goUpstairs, false);
-			el4.addEventListener("click", leaveParty, false);
+			/*el1.addEventListener("click", , false);
+			el2.addEventListener("click", , false);
+			el3.addEventListener("click", , false);
+			el4.addEventListener("click", , false);*/
 
 		</script>
 
