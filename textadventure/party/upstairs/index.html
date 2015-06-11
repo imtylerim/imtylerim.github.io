@@ -2,7 +2,7 @@
 <html>
 
 	<head>
-		<!-- Make sure linking of files/directories is correct -->
+
 		<link type="text/css" rel="stylesheet" href="../../main.css"/>
 		<script type ="text/javascript" src="../../time.js"></script>
 		<script type ="text/javascript" src="">/* choices.js */</script>
@@ -19,20 +19,21 @@
 
 		<span id="text">
 			<p>
-				<!--	INSERT PAGE TEXT HERE	-->
+				You walk upstairs. The sound of music thumps at your back. 
+
+				You peer into the hallway. 
 			</p>
 		</span>
 
 		<a href="bedroom.html">
-			<button type="button" id="choice1">Go into the bedroom</button>
+			<button type="button" id="choice1">Go into the left room</button>
 		</a>
 		<a href="bathroom.html">
-			<button type="button" id="choice2">Go into the bathroom</button>
+			<button type="button" id="choice2">Go into the right room</button>
 		</a>
 		<a href="../index.html">
 			<button type="button" id="choice3">Go back downstairs</button>
 		</a>
-		<button type="button" id="choice4"><!--Button text--></button>
 
 
 		<script>
@@ -40,12 +41,10 @@
 			var el1 = document.getElementById("choice1");
 			var el2 = document.getElementById("choice2");
 			var el3 = document.getElementById("choice3");
-			var el4 = document.getElementById("choice4");
 
 			el1.addEventListener("click", /*function*/, false);
 			el2.addEventListener("click", /*function*/, false);
 			el3.addEventListener("click", goDownstairs, false);
-			el4.addEventListener("click", /*function*/, false);
 
 			function goDownstairs() {
 				
