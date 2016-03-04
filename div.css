@@ -28,7 +28,8 @@
 	z-index: 1;
 	margin: 5px;
     border: 1px solid #ccc;
-    float: center;
+    float: left;
+    position: center;
 }
 
 #about {
