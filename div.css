@@ -1,0 +1,28 @@
+#topspace {
+	height: 120px;
+	display: block;
+}
+
+#name {
+	height: 50px;
+	display: block;
+	position: relative;
+	z-index: 0;
+}
+
+#midspace {
+	height: 40px;
+	display: block;
+}
+
+#about {
+	display: block;
+	position: relative;
+	z-index: 0;
+}
+
+#navigation {
+	position: fixed left;
+
+
+}
