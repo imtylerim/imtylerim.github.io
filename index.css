@@ -2,10 +2,12 @@ p {
 	font-family: Helvetica;
 }
 
-title {
+h1 {
 	font-size: 30px;
 	font-family: Georgia;
-	text-align: center;
+	height: 50%;
+	width: 50%;
+
 }
 
 a {
