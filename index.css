@@ -10,6 +10,16 @@ h1 {
 	text-align: center;
 }
 
+#topspace {
+	height: 15%;
+	width: 100%;
+}
+
+#name {
+	height: 50px;
+	width: 100%;
+}
+
 a {
 	color: blue;
 	text-decoration: none;
