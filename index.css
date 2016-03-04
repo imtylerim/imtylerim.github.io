@@ -3,7 +3,8 @@ p {
 	text-align: center;
 	font-size: 18px;
 	color: white;
-	text-shadow: 1px 1px gray;
+	/*text-shadow: 1px 1px gray;*/
+	background: black;
 }
 
 h1 {
@@ -12,7 +13,8 @@ h1 {
 	color: white;
 	font-family: Georgia;
 	text-align: center;
-	text-shadow: 1px 1px gray;
+	/*text-shadow: 1px 1px gray;*/
+	background: black;
 }
 
 #bg {
