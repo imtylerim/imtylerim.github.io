@@ -3,7 +3,7 @@ p {
 	text-align: center;
 	font-size: 18px;
 	color: white;
-	text-shadow: 2px 2px black;
+	text-shadow: 1px 1px gray;
 }
 
 h1 {
@@ -12,7 +12,7 @@ h1 {
 	color: white;
 	font-family: Georgia;
 	text-align: center;
-	text-shadow: 2px 2px black;
+	text-shadow: 1px 1px gray;
 }
 
 #bg {
@@ -36,6 +36,7 @@ h1 {
 #topspace {
 	height: 120px;
 	display: block;
+
 }
 
 #name {
@@ -59,4 +60,9 @@ h1 {
 a {
 	color: blue;
 	text-decoration: none;
+}
+
+img {
+	height: 50%;
+	width: 50%;
 }
