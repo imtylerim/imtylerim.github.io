@@ -38,6 +38,6 @@
 }
 
 #navigation {
-	position: fixed left;
+	position: absolute left;
 	z-index: 0;
 }
