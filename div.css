@@ -23,6 +23,5 @@
 
 #navigation {
 	position: fixed left;
-
-
+	z-index: 0;
 }
