@@ -1,5 +1,7 @@
 p {
 	font-family: Helvetica;
+	text-align: center;
+	font-size: 14px;
 }
 
 h1 {
@@ -10,8 +12,13 @@ h1 {
 	text-align: center;
 }
 
+img {
+	height: 100%;
+	width: 100%;
+}
+
 #topspace {
-	height: 200px;
+	height: 120px;
 	display: block;
 }
 
@@ -21,7 +28,7 @@ h1 {
 }
 
 #midspace {
-	height: 300px;
+	height: 40px;
 	display: block;
 }
 
