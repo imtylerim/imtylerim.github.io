@@ -1,5 +1,5 @@
 #topspace {
-	height: 120px;
+	height: 60px;
 	display: block;
 }
 
@@ -13,6 +13,22 @@
 #midspace {
 	height: 40px;
 	display: block;
+}
+
+#gallery {
+	height: 100px;
+	display: block;
+	z-index: 0;
+}
+
+.img {
+	height: 100px;
+	width: 100px;
+	display: block;
+	z-index: 1;
+	margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
 }
 
 #about {

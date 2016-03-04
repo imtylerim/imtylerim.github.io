@@ -15,6 +15,16 @@ h1 {
 	text-shadow: 1px 1px black;
 }
 
+#pagetitle {
+	color: black;
+	text-shadow: 1px 1px white;
+}
+
+#description {
+	color: black;
+	text-shadow: 1px 1px white;
+}
+
 a {
-	text-decoration: underline;
+	text-decoration: underline none;
 }
