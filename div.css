@@ -38,6 +38,9 @@
 }
 
 #navigation {
-	position: absolute left;
+	position: fixed;
+	float: left;
+	left: 0px;
+	top: 0px;
 	z-index: 0;
 }
